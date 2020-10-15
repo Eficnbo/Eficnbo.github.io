@@ -61,7 +61,7 @@
         p.y -= p.velocity;
         
         if (p.y < -200) {
-          p.y = 4000;
+          p.y = Math.random()*4000-300;
           p.velocity = 0;
         }
       });
