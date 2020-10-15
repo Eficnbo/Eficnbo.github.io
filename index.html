@@ -26,10 +26,10 @@
       document.body.appendChild(renderer.domElement);
 
       starGeo = new THREE.Geometry();
-      for(let i=0;i<6000;i++) {
+      for(let i=0;i<16000;i++) {
         star = new THREE.Vector3(
           Math.random() * 600 - 300,
-          Math.random() * 600 - 300,
+          Math.random() * 4000 - 300,
           Math.random() * 600 - 300
         );
         star.velocity = 0;
@@ -48,8 +48,7 @@
       scene.add(stars);
 
       window.addEventListener("resize", onWindowResize, false);
-
-      animate(); 
+      animate();
     }
     function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
