@@ -26,7 +26,7 @@
       document.body.appendChild(renderer.domElement);
 
       starGeo = new THREE.Geometry();
-      for(let i=0;i<16000;i++) {
+      for(let i=0;i<50000;i++) {
         star = new THREE.Vector3(
           Math.random() * 600 - 300,
           Math.random() * 4000 - 300,
@@ -61,7 +61,7 @@
         p.y -= p.velocity;
         
         if (p.y < -200) {
-          p.y = 200;
+          p.y = 4000;
           p.velocity = 0;
         }
       });
