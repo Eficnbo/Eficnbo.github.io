@@ -183,6 +183,25 @@
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
 			}
+			window.constant = 0
+
+			document.onkeydown = moveCar;
+
+			function moveCar(e) {
+				e = e ||  window.event
+				if (e.keyCode == '38') {
+					constant = 1
+				}
+				else if (e.keyCode == '40') {
+					constant = -1
+				}
+				else if (e.keyCode == '37') {
+				// left arrow
+				}
+				else if (e.keyCode == '39') {
+				// right arrow
+				}
+			}
 			let calc = 0
 			function render() {
 				calc ++
@@ -196,7 +215,7 @@
 
 				//grid.position.z = - ( time ) % 5;
 				if(calc > 200) {
-					scene.children[1].position.z += time/500
+					scene.children[1].position.z += time/500 * constant
 				}
 			
 				renderer.render( scene, camera );
