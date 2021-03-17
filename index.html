@@ -184,7 +184,7 @@
 
 			}
 			window.constant = 0
-
+			window.wheelRot = 0
 			document.onkeydown = moveCar;
 
 			function moveCar(e) {
@@ -197,9 +197,11 @@
 				}
 				else if (e.keyCode == '37') {
 				// left arrow
+					wheelRot += 0.05 
 				}
 				else if (e.keyCode == '39') {
 				// right arrow
+					wheelRot -= 0.05
 				}
 			}
 			let calc = 0
@@ -210,7 +212,7 @@
 				for ( let i = 0; i < wheels.length; i ++ ) {
 
 					wheels[ i ].rotation.x = time * Math.PI* constant;
-
+					wheels[ i ].rotation.y = wheelRot
 				}
 
 				//grid.position.z = - ( time ) % 5;
