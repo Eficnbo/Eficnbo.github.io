@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<button onclick="playVid()" type="button">Play Video</button>
+<button onclick="pauseVid()" type="button">Pause Video</button><br> 
+<button onclick="goBack()" type="button">go back</button><br> 
+
+<video id="myVideo" width="1200" height="800">
+  <source preload = "auto" src="angrybirds.m4v" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<script> 
+var vid = document.getElementById("myVideo"); 
+
+function playVid() { 
+  vid.play(); 
+} 
+
+function pauseVid() { 
+  vid.pause(); 
+} 
+
+function goBack() {
+    document.location = "index.html"
+}
+</script> 
+
+
+
+</body> 
+</html>
